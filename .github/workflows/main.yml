@@ -1,9 +1,13 @@
 name: Run Every Minute
 
 on:
-  schedule:
-    - cron: '* * * * *'
-workflow_dispatch:
+  #schedule:
+   # - cron: '* * * * *'
+  workflow_dispatch:
+    inputs:
+      description: name
+      required: true
+      type: string
 jobs:
   example-job:
     runs-on: ubuntu-latest
