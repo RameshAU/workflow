@@ -5,9 +5,10 @@ on:
    # - cron: '* * * * *'
   workflow_dispatch:
     inputs:
-      description: name
-      required: true
-      type: string
+      name:
+        description: "name"
+        required: true
+        type: string
 jobs:
   example-job:
     runs-on: ubuntu-latest
