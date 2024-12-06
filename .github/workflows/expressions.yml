@@ -36,4 +36,4 @@ jobs:
         run: echo succeeded
       - name: The job has failed
         if: ${{ failure() }}
-        run: failed
+        run: echo failed
