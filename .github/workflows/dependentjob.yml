@@ -4,15 +4,18 @@ on: [push]
 jobs:
   decom:
     needs: [build,up]
+    runs-on: ubuntu-latest
     name: decommission
     steps: 
       - run: echo server decommissioned
   build:
+    runs-on: ubuntu-latest
     name: build
     steps: 
       - run: echo server build
   up:
     needs: [build]
+    runs-on: ubuntu-latest
     name: up
     steps: 
       - run: echo server up
