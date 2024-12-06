@@ -1,0 +1,13 @@
+name: wworkflow commands
+on: [push]
+
+jobs:
+  variable:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check env variable
+        run: echo $GITHUB_ENV
+      
+      - name: status
+        if: ${{ success() }}
+        run: echo succeeded
