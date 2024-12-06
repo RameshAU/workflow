@@ -6,6 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: check env variable
+        run: echo $(export GITHUB_ENV=five)
+      - name: check env variable
         run: echo $GITHUB_ENV
       
       - name: status
