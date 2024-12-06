@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set env variable
-        run: echo ENV=five >> $GITHUB
+        run: echo ENV=This is the declared variable  >> $GITHUB_ENV
       - name: check env variable
         run: echo $ENV
       
