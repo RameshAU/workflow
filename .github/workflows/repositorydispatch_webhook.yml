@@ -6,7 +6,7 @@ name: CI
 on:
   repository_dispatch:
     types:
-      - webhook
+      - custom_webhook
   
 jobs:
   # This workflow contains a single job called "build"
