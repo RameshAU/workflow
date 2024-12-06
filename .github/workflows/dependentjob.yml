@@ -3,14 +3,15 @@ on: [push]
 
 jobs:
   decom:
-    needs: [build,up]
+    #needs: [build,up]
     runs-on: ubuntu-latest
-    - name: decommission
-      steps: 
-        - run: echo server decommissioned
-    - name: status
-      if: ${{ success ()}}
-      run: echo "code ran successfully"
+    steps: 
+      - name: decommission
+        steps: 
+          - run: echo server decommissioned
+      - name: status
+        if: ${{ success ()}}
+        run: echo "code ran successfully"
 
   build:
     runs-on: ubuntu-latest
