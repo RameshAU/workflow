@@ -8,9 +8,9 @@ jobs:
     name: decommission
     steps: 
       - run: echo server decommissioned
-    name: status
-      if: ${{ success ()}}
-      run: echo "code ran successfully"
+    #name: status
+     # if: ${{ success ()}}
+      #run: echo "code ran successfully"
 
   build:
     runs-on: ubuntu-latest
