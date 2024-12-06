@@ -6,8 +6,8 @@ jobs:
     needs: [build,up]
     runs-on: ubuntu-latest
     name: decommission
-      steps: 
-        - run: echo server decommissioned
+    steps: 
+      - run: echo server decommissioned
     name: status
       if: ${{ success ()}}
       run: echo "code ran successfully"
@@ -15,8 +15,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     name: build
-      steps: 
-        - run: echo server built
+    steps: 
+      - run: echo server built
     name: status
       if: ${{ success ()}}
       run: echo "code ran successfully"
@@ -25,8 +25,8 @@ jobs:
     needs: [build]
     runs-on: ubuntu-latest
     name: up
-      steps: 
-        - run: echo server up
+    steps: 
+      - run: echo server up
     name: status
       if: ${{ success ()}}
       run: echo "code ran successfully"
