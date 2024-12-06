@@ -7,7 +7,7 @@ jobs:
 
     steps:
       - name: install docker
-        run: apt install docker
+        run: sudo su - && apt install docker
       
       - name: status
         if: ${{ success() }}
