@@ -1,0 +1,20 @@
+name: workflow commands
+on: [push]
+
+jobs:
+  variable:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set env variable
+        run: |
+          echo Action: $Action
+          echo Actor: $Actor
+          echo Repo: $Repo
+        env:
+          Action: ${{ github.action}}
+          Actor: ${{ github.actor}}
+          Repo: ${{ github.repository}}
+
+      - name: status
+        if: ${{ success() }}
+        run: echo succeeded
