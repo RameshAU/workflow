@@ -5,8 +5,8 @@ jobs:
   variable:
     runs-on: ubuntu-latest
     steps:
-      - name: check env variable
-        run: echo ENV=five >> $GITHUB_ENV
+      - name: Set env variable
+        run: echo ENV=five >> $GITHUB
       - name: check env variable
         run: echo $ENV
       
