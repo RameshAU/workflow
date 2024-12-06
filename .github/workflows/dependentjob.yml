@@ -1,0 +1,18 @@
+name: dependent jobs
+on: [push]
+
+jobs:
+  decom:
+    needs: [build,up]
+    name: decommission
+    steps: 
+      - run: echo server decommissioned
+  build:
+    name: build
+    steps: 
+      - run: echo server build
+  up:
+    needs: [build]
+    name: up
+    steps: 
+      - run: echo server up
