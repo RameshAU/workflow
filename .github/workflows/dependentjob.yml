@@ -5,28 +5,28 @@ jobs:
   decom:
     needs: [build,up]
     runs-on: ubuntu-latest
-      - name: decommission
-        steps: 
-          - run: echo server decommissioned
-      - name: status
-        if: ${{ success ()}}
-        run: echo "code ran successfully"
+    name: decommission
+      steps: 
+        - run: echo server decommissioned
+    name: status
+      if: ${{ success ()}}
+      run: echo "code ran successfully"
 
   build:
     runs-on: ubuntu-latest
-      - name: build
-        steps: 
-          - run: echo server built
-      - name: status
-        if: ${{ success ()}}
-        run: echo "code ran successfully"
+    name: build
+      steps: 
+        - run: echo server built
+    name: status
+      if: ${{ success ()}}
+      run: echo "code ran successfully"
 
   up:
     needs: [build]
     runs-on: ubuntu-latest
-      - name: up
-        steps: 
-          - run: echo server up
-      - name: status
-        if: ${{ success ()}}
-        run: echo "code ran successfully"
+    name: up
+      steps: 
+        - run: echo server up
+    name: status
+      if: ${{ success ()}}
+      run: echo "code ran successfully"
